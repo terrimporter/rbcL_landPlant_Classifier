@@ -1,5 +1,6 @@
 # Eukaryote rbcL land plant reference set for the RDP Classifier
 
+[![DOI](https://zenodo.org/badge/478168998.svg)](https://zenodo.org/badge/latestdoi/478168998)
 
 This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign land plant rbcL cpDNA sequences.  The latest release can be downloaded from https://github.com/terrimporter/rbcL_landPlant_Classifier/releases .  The trained files ready to be used with the RDP Classifier are available as well as the original files used for training (a taxonomy file and a FASTA file) are available as 'version-ref'.  A diatom-specific rbcL classifier is available at https://github.com/terrimporter/rbcLdiatomClassifier and a more general eukaryote rbcL classifier (includes land and non-land plants) is available at https://github.com/terrimporter/rbcLClassifier .
 
