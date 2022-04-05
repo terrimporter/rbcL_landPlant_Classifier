@@ -1,4 +1,4 @@
-# Eukaryote rbcL land plant reference set for the RDP Classifier
+# Land plant rbcL reference set for the RDP Classifier
 
 [![DOI](https://zenodo.org/badge/478168998.svg)](https://zenodo.org/badge/latestdoi/478168998)
 
@@ -7,6 +7,7 @@ This repository contains training sets that can be used with the Ribosomal Datab
 # How to cite
 
 You can cite this repository directly:  
+Teresita M. Porter. (2022) Land plant rbcL reference set for the RDP Classifier (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.6415246
 
 You should also cite the Ribosomal Database Classifier:  
 Wang et al. (2007) Naïve Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy.  Applied and Environmental Microbiology, 73: 5261.
