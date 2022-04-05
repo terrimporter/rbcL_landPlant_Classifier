@@ -24,10 +24,10 @@ unzip rdp_classifier_2.13
 # record path to classifier.jar ex. /path/to/rdp_classifier_2.13/dist/classifier.jar
 
 ############ Get the latest rbcL training set
-wget https://github.com/terrimporter/rbcL_landPlant_Classifier/releases/download/v1/rbcL_landPlant_v1_trained.tar.gz
+wget https://github.com/terrimporter/rbcL_landPlant_Classifier/releases/download/v1/rbcL_landPlant_v1.zip
 
 # decompress it
-tar -xzf rbcL_landPlant_v1_trained.tar.gz
+unzip rbcL_landPlant_v1.zip
 
 # record the path to the rRNAClassifier.properties file ex. /path/to/mydata_trained/rRNAClassifier.properties
 
