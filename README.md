@@ -23,7 +23,7 @@ wget https://sourceforge.net/projects/rdp-classifier/files/rdp-classifier/rdp_cl
 unzip rdp_classifier_2.13
 # record path to classifier.jar ex. /path/to/rdp_classifier_2.13/dist/classifier.jar
 
-############ Get the latest rbcL training set
+############ Get the latest land plant rbcL training set
 wget https://github.com/terrimporter/rbcL_landPlant_Classifier/releases/download/v1/rbcL_landPlant_v1.zip
 
 # decompress it
