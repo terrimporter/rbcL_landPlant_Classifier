@@ -63,7 +63,9 @@ Species | - | NA | NA | NA | NA
 
 NA = No cutoff available will result in 80% correct assignments 
 
-* Leave one sequence out testing for query lengths 300 bp+ is in progress and will be updated when complete.
+* Leave one sequence out testing for query lengths 500 bp+ is in progress and will be updated when complete.
+
+Generally speaking, for a 200bp query sequence, it is not possible to get species level assignments with at least 80% accuracy. Genus level assignments have at least 80% accuracy when using a 0.40 bootstrap support cutoff.  Without using any cutoffs (or a bootstrap cutoff of 0), then we would expect assignments to the family rank to be ~ 95% correct, and assignments to the order-kingdom ranks to be ~ 99% correct.
 
 ### v1-ref
 
