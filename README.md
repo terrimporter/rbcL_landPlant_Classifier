@@ -73,7 +73,7 @@ The rbcL_landPlant_v1-ref_training.zip file should be decompressed.  The folder 
 
 ### v1-blastn
 
-The rbcL_landPlant_v1-blastn.zip file should be unzipped.  The folder contains a FASTA formatted file that works with locally installed blastn.
+The rbcL_landPlant_v1-blastn.zip file should be unzipped.  The folder contains a FASTA formatted file that can be used to build a local database with makeblastdb and can be run using blastn.  This may be useful for finding similar species in the reference set.
 
 ```linux
 # assuming you already have local blast intalled
@@ -81,7 +81,7 @@ The rbcL_landPlant_v1-blastn.zip file should be unzipped.  The folder contains a
 # create a blast database using the fasta file
 makeblastdb -in rbcL_landPlant.fasta -dbtype nucl -input_type fasta
 
-# run blast keeping top hit only, tabular output, with 10 threads
+# example, run blast keeping top hit only, tabular output, with 10 threads
 blastn -query testquery.fasta -task megablast -db rbcL_landPlant.fasta -out test.blastn -evalue '1e-20' -outfmt 6 -max_target_seqs 1 -num_threads 10
 
 ```
