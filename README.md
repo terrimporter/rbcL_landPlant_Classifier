@@ -42,7 +42,7 @@ java -Xmx8g -jar /path/to/rdp_classifier_2.13/classifier.jar -t /path/to/mydata_
 
 ### v1
 
-The rbcL_landPlant_v1_trained.tar.gz file should be decompressed and used directly with the RDP Classifier to make taxonomic assignments.  
+The rbcL_landPlant_v1_trained.zip file should be decompressed and used directly with the RDP Classifier to make taxonomic assignments.  
 
 RbcL land plant (Embryophyta) records were mined from the NCBI nucleotide database [April 1/22]. Sequences were filtered to retain only those that are 500 bp+, contain no non-nucleotide characters, and have Linnean binomial species names.  Sequences were screened for bacterial contaminants. Bacterial and non-land plant outgroup sequences were added.
 
@@ -69,17 +69,22 @@ Generally speaking, for a 200bp query sequence, it is not possible to get specie
 
 ### v1-ref
 
-The rbcL_landPlant_v1-ref_training.tar.gz file should be decompressed.  The folder contains the original taxonomy and fasta files that are included here for reference only.  Sequences were mined from the NCBI nucleotide database in April 2022 and only includes sequences identified to the species rank that are at least 500 bp long.  The sequences have been screened to remove any potential bacterial contaminant sequences.  Taxonomic composition is largely comprised of land plants (Embryophyta) with some bacterial and non-land plant outgroup taxa.  
+The rbcL_landPlant_v1-ref_training.zip file should be decompressed.  The folder contains the original taxonomy and fasta files that are included here for reference only.  Sequences were mined from the NCBI nucleotide database in April 2022 and only includes sequences identified to the species rank that are at least 500 bp long.  The sequences have been screened to remove any potential bacterial contaminant sequences.  Taxonomic composition is largely comprised of land plants (Embryophyta) with some bacterial and non-land plant outgroup taxa.  
 
-# How to use
+### v1-blastn
 
-Decompress the tar.gz file:
+The rbcL_landPlant_v1-blastn.zip file should be unzipped.  The folder contains a FASTA formatted file that works with locally installed blastn.
 
-$ tar -xvzf FileName.tar.gz
+```linux
+# assuming you already have local blast intalled
+# put the fasta file in your ncbi-blast-2.9.0+ directory
+# create a blast database using the fasta file
+makeblastdb -in rbcL_landPlant.fasta -dbtype nucl -input_type fasta
 
-Use with the RDP classifier:
+# run blast keeping top hit only, tabular output, with 10 threads
+blastn -query testquery.fasta -task megablast -db rbcL_landPlant.fasta -out test.blastn -evalue '1e-20' -outfmt 6 -max_target_seqs 1 -num_threads 10
 
-java -Xmx8g -jar /path/to/rdp_landPlant_classifier_2.13/dist/classifier.jar classify -t /path/to/rbcL_landPlant_version_trained/rRNAClassifier.properties -o ClassifiedQueryFilename QueryFilename
+```
 
 # Additional information
 
