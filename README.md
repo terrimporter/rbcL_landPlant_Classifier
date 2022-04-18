@@ -77,7 +77,7 @@ The rbcL_landPlant_v1-blastn.zip file should be unzipped.  The folder contains a
 
 ```linux
 # assuming you already have local blast intalled
-# put the fasta file in your ncbi-blast-2.9.0+ directory
+# put the fasta file in your ncbi-blast-2.9.0+/db directory
 # create a blast database using the fasta file
 makeblastdb -in rbcL_landPlant.fasta -dbtype nucl -input_type fasta
 
