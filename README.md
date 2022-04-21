@@ -59,11 +59,9 @@ Class | 0 | 0 | 0 | 0 | 0
 Order | 0 | 0 | 0 | 0 | 0  
 Family | 0 | 0 | 0 | 0 | 0  
 Genus | 0 | 0 | 0 | 40 | 90   
-Species | - | NA | NA | NA | NA  
+Species | NA | NA | NA | NA | NA  
 
 NA = No cutoff available will result in 80% correct assignments 
-
-* Leave one sequence out testing for query lengths 500 bp+ is in progress and will be updated when complete.
 
 Generally speaking, for a 200bp query sequence, it is not possible to get species level assignments with at least 80% accuracy. Genus level assignments have at least 80% accuracy when using a 0.40 bootstrap support cutoff.  Without using any cutoffs (or a bootstrap cutoff of 0), then we would expect assignments to the family rank to be ~ 95% correct, and assignments to the order-kingdom ranks to be ~ 99% correct.
 
@@ -73,7 +71,7 @@ The rbcL_landPlant_v1-ref_training.zip file should be decompressed.  The folder 
 
 ### v1-blastn
 
-The rbcL_landPlant_v1-blastn.zip file should be unzipped.  The folder contains a FASTA formatted file that can be used to build a local database with makeblastdb and can be run using blastn.  This may be useful for finding similar species in the reference set.
+The rbcL_landPlant_v1-blastn.zip file should be unzipped.  The folder contains a FASTA formatted file that can be used to build a local database with makeblastdb and can be run using blastn.  Since this classifier cannot reliably make taxonomic assignments to the species rank, the BLAST approach may be useful for finding similar species in the reference set.
 
 ```linux
 # assuming you already have local blast intalled
@@ -97,4 +95,4 @@ https://sourceforge.net/projects/rdp-classifier/
 
 Wang, Q., Garrity, G. M., Tiedje, J. M., & Cole, J. R. (2007). Naive Bayesian Classifier for Rapid Assignment of rRNA Sequences into the New Bacterial Taxonomy. Applied and Environmental Microbiology, 73(16), 5261–5267. Available from https://sourceforge.net/projects/rdp-classifier/
 
-Last updated: April 18, 2022
+Last updated: April 21, 2022
